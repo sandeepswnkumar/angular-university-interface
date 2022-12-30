@@ -1,0 +1,216 @@
+/*===================================*
+  03. BANNER SECTION
+*===================================*/
+.full_screen,.full_screen .carousel-item {
+	height: 100vh;
+}
+.banner_content_wrap .carousel-item {
+	padding: 100px 0;
+}
+.banner_content h2 {
+	font-size: 50px;
+	margin-bottom: 20px;
+	vertical-align: bottom;
+}
+.banner_content p {
+	color: #333;
+	font-size: 18px;
+	margin-bottom: 35px;
+}
+.banner_content.text_white p {
+	color: #fff;
+}
+.banner_section .banner_slide_content {
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.carousel-control-next, .carousel-control-prev {
+	background-color: rgba(0,0,0,0.5);
+	font-size: 20px;
+	height: 50px;
+	opacity: 0;
+	top: 50%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 50px;
+}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+	 opacity: 0;
+}
+.carousel:hover .carousel-control-next, .carousel:hover .carousel-control-prev {
+	opacity: 1;
+}
+.carousel-control-next {
+	right: 20px;
+}
+.carousel-control-prev {
+	left: 20px;
+}
+.carousel_style1 .carousel-control-next, .carousel_style1 .carousel-control-prev {
+	border-radius: 100%;
+}
+.carousel-indicators {
+	bottom: 20px;
+}
+.carousel-indicators li {
+	border-radius: 100%;
+	cursor: pointer;
+	width: 12px;
+	height: 12px;
+}
+.content_overlay_bg {
+	padding: 50px;
+	position:relative;
+}
+.content_overlay_bg::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.banner_head2 {
+	 font-size: 40px;
+}
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+}
+.carousel-fade .carousel-item-next.carousel-item-left, .carousel-fade .carousel-item-prev.carousel-item-right, .carousel-fade .carousel-item.active {
+	opacity: 1;
+}
+.carousel-fade .active.carousel-item-left, .carousel-fade .active.carousel-item-prev, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item.active {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.carousel-fade .active.carousel-item-left, .carousel-fade .active.carousel-item-prev, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item.active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.carousel-indicators.justify-content-end {
+	left: auto;
+}
+.carousel-indicators.justify-content-start {
+	right: auto;
+}
+.carousel-item img {
+	position: relative;
+	z-index: -1;
+}
+/*===================================*
+  03.END BANNER SECTION
+*===================================*/
+
+
+.sections{
+	align-items: center;
+	padding: 80px auto;
+	@media screen and (max-width:991px) {
+		flex-direction: column;
+	}
+	.section-content{
+		width: 50%;
+		@media screen and (max-width:991px) {
+			width: 100%;
+			order: 2;
+		}
+		.section-heading{
+			h3{
+				font-size: 2.1rem;
+				// font-weight: 600;
+				@media screen and (max-width:991px) {
+					font-size: 1.5rem;
+				}	
+			}
+			p{
+				font-size: 1.2rem;
+				text-align: center;
+			}
+		}
+		
+		.divider{
+			width: 100px;
+			border: 1px solid cyan;
+			margin-top: 6px;
+			
+		}
+		.section-para{
+			p{
+				font-size: 1.1rem;
+				@media screen and (max-width:991px) {
+					font-size: 0.9rem;
+				}	
+			}
+		}
+		.section-box{
+			// background-color: red;
+			justify-content: center;
+			gap: 10px;
+			padding: 10px;
+			.service-card{
+				// width: 30%!important;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 50px 30px;
+				border: 1px solid #333;
+				border-radius: 20px;
+				box-shadow: inset;
+				// margin: 20px;
+				
+				.service-card-img{
+					mat-icon{
+						font-size: 6rem;
+						width: unset;
+						height: unset;
+					}
+				}
+				.service-card-heading{
+					h4{
+						text-align: center;
+					}
+				}
+				.service-card-para{
+					p{
+						text-align: center;
+						color: black;
+					}
+				}
+			}
+		}
+		.readMore{
+			button{
+				mat-icon{
+					font-size: 18px;
+					height: unset;
+					width: unset;
+				}
+			}
+		}
+	}
+	.section-img{
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+			@media screen and (max-width:991px) {
+				width: 50%;
+			}	
+		}
+		@media screen and (max-width:991px) {
+			width: 100%;
+			order: 1;
+			margin-bottom: 20px;
+		}
+	}
+}

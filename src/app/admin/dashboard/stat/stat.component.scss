@@ -1,34 +1,84 @@
-:host ::ng-deep .mat-card-header-text {
-  width: 100%;
-  text-align: right;
-}
-
-.icon-lg {
-  font-size: 40px;
-}
+@import '~src/scss/variables';
 
 .mat-card {
-  color: #fff;
-  .mat-card-header {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+
+  .icon-lg {
+    font-size: 70px;
+  }
+
+  .mat-card-avatar {
+    height: unset;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    mat-icon {
+      height: unset;
+      width: unset;
+    }
   }
+
+  .mat-card-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .mat-card-actions {
+      margin-bottom: 0;
+      padding: 0;
+
+      button {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+  }
+
   .mat-card-title {
-    font-size: 40px !important;
+    font-size: 30px !important;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
   }
+
   .mat-card-subtitle {
-    color: #fff;
+    font-size: 20px;
+    text-align: center;
     white-space: nowrap;
+    margin: 0;
   }
+
   &.danger {
-    background: linear-gradient(60deg, #ec407a, #d81b60);
+    background-color: $light-green;
+    color: black;
+    font-weight: 600;
   }
+
   &.warn {
-    background: linear-gradient(60deg, #ffa726, #fb8c00);
+    background-color: $light-pink;
+    color: black;
+    font-weight: 600;
+
   }
+
   &.success {
-    background: linear-gradient(60deg, #66bb6a, #43a047);
+    background-color: $light-blue;
+    color: black;
+    font-weight: 600;
   }
+
   &.info {
-    background: linear-gradient(60deg, #26c6da, #00acc1);
+    background-color: $light-orage;
+    color: black;
+    font-weight: 600;
   }
 }

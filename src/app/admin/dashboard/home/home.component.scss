@@ -1,4 +1,21 @@
 @import '~src/scss/variables';
+
 .location-icon {
   color: $primary-color;
+}
+
+.graphChart {
+  box-sizing: border-box;
+  .chartMainCard {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    .chatData{
+      margin: 10px;
+      width: 48%;
+    }
+  }
 }

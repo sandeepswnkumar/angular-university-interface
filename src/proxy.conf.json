@@ -1,0 +1,6 @@
+{
+    "/api": {
+    "target": "http://api.ccsugnimresult.com",
+    "secure": true
+    }
+}

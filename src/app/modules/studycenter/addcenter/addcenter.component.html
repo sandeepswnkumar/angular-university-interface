@@ -1,0 +1,56 @@
+<div class="bradCrum">
+    <div>
+        <p>Add Center</p>
+        <p>Center <mat-icon>chevron_right</mat-icon> Add Center </p>
+    </div>
+</div>
+<div class="mb20 main-components-add mt-p-25" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start">
+    <mat-card fxFlex="100">
+        <form class="form"  [formGroup]="form">
+            <div class="fieldlHeading">
+                <h3>Personal Information</h3>
+            </div>
+            <div class="inputForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>College Name</mat-label>
+                    <input matInput required formControlName="collegeName" />
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Director Name</mat-label>
+                    <input matInput formControlName="collegeDirName" />
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name1</mat-label>
+                    <input matInput formControlName="name1" />
+                </mat-form-field>
+                <mat-form-field class="datePicker" appearance="outline">
+                    <mat-label>Date</mat-label>
+                    <input matInput readonly [matDatepicker]="picker" formControlName="date" />
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name2</mat-label>
+                    <input matInput  formControlName="name2" />
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name3</mat-label>
+                    <input matInput formControlName="name3" />
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name4</mat-label>
+                    <input matInput  formControlName="name4" />
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name5</mat-label>
+                    <input matInput formControlName="name5" />
+                </mat-form-field>
+            </div>
+            
+            <div class="actionForm">
+                <button mat-raised-button class="cancle">Cancle</button>
+                <button mat-raised-button color="primary" (click)="submitForm()">Submit</button>
+            </div>
+        </form>
+    </mat-card>
+</div>

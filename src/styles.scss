@@ -1,10 +1,255 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import './scss/material';
-@import './scss/utils';
-@import './scss/responsive';
-@import './scss/variables';
-@import './scss/theme';
+// @import './scss/utils';
+// @import './scss/responsive';
+// @import './scss/variables';
+// @import './scss/theme';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+::ng-deep{
+    * {
+        box-sizing: border-box;
+        font-family: 'Source Sans Pro', sans-serif;
+        padding: 0;
+    margin: 0;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.bradCrum {
+    width: 100%;
+    height: 130px;
+    color: white;
+    padding-left: 20px;
+    background: linear-gradient(175deg, #32a9ee 20%, #33d8c2 70%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            font-size: 13px;
+            padding: 0;
+            margin: 3px 0;
+            display: flex;
+            align-items: center;
+
+            mat-icon {
+                height: unset;
+                width: unset;
+                line-height: 0;
+                font-size: 17px;
+                margin-top: 3px;
+            }
+        }
+
+        p:nth-child(1) {
+            font-size: 17px;
+        }
+    }
+}
+
+.mt-m-25 {
+    margin-top: -25px;
+}
+
+.mt-p-25 {
+    margin-top: 25px;
+}
+::ng-deep{
+    ::placeholder{
+        font-size: 14px;
+    }
+}
+.main-container{
+    padding: 16px;
+}
+
+.main-components-manage {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+
+    .table-actions {
+        padding: 0 20px;
+        height: 50px;
+        width: 100%;
+        display: flex;
+
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            mat-icon {
+                margin-right: 5px;
+                color: rgb(156, 156, 156);
+                font-size: 20px;
+            }
+
+            mat-form-field {
+                margin-top: 5px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                input {
+                    width: 100%;
+                }
+                
+            }
+
+        }
+
+    }
+
+    mat-card {
+        overflow: auto;
+        border-radius: 10px;
+    }
+}
+
+.mat-table {
+    thead {
+        tr {
+            background-color: whitesmoke;
+            height: 45px;
+
+            .mat-sort-header-content {
+                padding: 0 15px;
+                white-space: nowrap;
+                font-size: 13px;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            height: 45px;
+
+            td {
+                padding: 0 15px;
+                white-space: nowrap;
+                font-size: 13px;
+            }
+        }
+    }
+
+    mat-checkbox {
+        transform: scale(0.8);
+    }
+}
+
+.main-components-add {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+
+    mat-card {
+        border-radius: 10px;
+
+        .fieldlHeading {
+            border-bottom: 1px solid #efefef;
+            margin-bottom: 15px;
+
+
+            h3 {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                padding-bottom: 10px;
+                color: #7d7d7d;
+                font-size: 17px;
+                font-weight: 500;
+                padding-bottom: 10px;
+                margin: 0;
+                font-weight: bold!Important;
+            }
+
+            h3::before {
+                position: absolute;
+                content: "";
+                background: #1976d3;
+                width: 100%;
+                height: 3px;
+                bottom: -2px;
+            }
+        }
+
+        form {
+            .inputForm {
+                font-size: 12px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+
+                mat-form-field {
+                    min-width: 32%;
+                    margin: 0 5px;
+
+                    @media screen and (max-width:768px) {
+                        width: 100%;
+                    }
+                }
+
+                .datePicker {
+                    .mat-form-field-wrapper {
+                        .mat-form-field-flex {
+                            height: 45px;
+
+                            .mat-form-field-infix {
+                                display: flex;
+                                padding: 0;
+
+                                .mat-datepicker-toggle {
+                                    margin-top: -6px;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+            .actionForm{
+                display: flex;
+                justify-content: flex-end;
+                button{
+                    margin: auto 5px ;
+                    font-weight: 600;
+                }
+                .cancle{
+                    background-color: #f5f5f5;
+                }
+            }
+        }
+    }
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

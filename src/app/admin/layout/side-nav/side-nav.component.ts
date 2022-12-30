@@ -7,8 +7,14 @@ import { childRoutes } from '../../child-routes';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
-  showMenu = false;
+  subject = false;
+  course = false;
+  staff = false;
+  session = false;
+  attendence = false;
+  studycenter = false;
   routes = childRoutes;
+  
   constructor() {}
 
   ngOnInit() {}

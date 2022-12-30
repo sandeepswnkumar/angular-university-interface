@@ -1,0 +1,55 @@
+<div class="containerHeader">
+    <div class="topHeader p-lr-100px">
+        <div class="social">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="login">
+            <a href="">LOGIN</a>
+        </div>
+    </div>
+    <div class="logoContact p-lr-100px">
+        <div class="logo">
+            <img src="https://bestwpware.com/html/tm/childcare-preview/assets/img/logo.png" alt="log">
+        </div>
+        <div class="contactInfo">
+            <div class="cell-info contact">
+                <mat-icon>call</mat-icon>
+                <div class="cell-number inner-contact">
+                    <h3><a href="tel:+919939779372">+91 99397 79372</a></h3>
+                    <p>CALL US TODAY</p>
+                </div>
+            </div>
+            <div class="email-info contact">
+                <mat-icon>mail</mat-icon>
+                <div class="emailId inner-contact">
+                    <h3><a href="tel:+919939779372">sandeepswnkumar@gmail.com</a></h3>
+                    <p>GET IN TOUCH WITH EMAIL</p>
+                </div>
+            </div>
+            <div class="timing contact">
+                <mat-icon>schedule</mat-icon>
+                <div class="inner-contact">
+                    <h3>Mon to Sat Open : 9AM - 6PM</h3>
+                    <p>OUR OFFICE HOUR</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainNav p-lr-100px" (window:resize)="onResize($event)">
+        <mat-icon (click)="isMenu = !isMenu">
+            menu
+        </mat-icon>
+        <ul *ngIf="isMenu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Course</a></li>
+            <li><a href="">Teachers</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Contact</a></li>
+            <li *ngIf="isLoginShow"><a href="">Login</a></li>
+        </ul>
+    </div>
+</div>

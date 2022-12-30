@@ -13,6 +13,37 @@ const routes: Routes = [
         path: '',
         redirectTo: 'dashboard'
       },
+      {
+        path: 'studycenter',
+        loadChildren: () =>
+          import('./../modules/studycenter/studycenter.module').then((m) => m.StudycenterModule),
+      },
+      {
+        path: 'subject',
+        loadChildren: () =>
+          import('./../modules/subjects/subjects.module').then((m) => m.SubjectsModule),
+      },
+      {
+        path: 'course',
+        loadChildren: () =>
+          import('./../modules/courses/courses.module').then((m) => m.CoursesModule),
+      },
+      {
+        path: 'staff',
+        loadChildren: () =>
+          import('./../modules/staff/staff.module').then((m) => m.StaffModule),
+      },
+      {
+        path: 'session',
+        loadChildren: () =>
+          import('./../modules/session/session.module').then((m) => m.SessionModule),
+      },
+      {
+        path: 'attendence',
+        loadChildren: () =>
+          import('./../modules/attendence/attendence.module').then((m) => m.AttendenceModule),
+      },
+      
       ...childRoutes
     ]
   }

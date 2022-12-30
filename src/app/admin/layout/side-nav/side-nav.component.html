@@ -1,36 +1,124 @@
 <mat-nav-list>
-  <a
-    *ngFor="let item of routes"
-    mat-list-item
-    [routerLinkActive]="'active'"
-    [routerLink]="['/', item.path]"
-  >
-    <mat-icon class="sidenav-icon">{{ item.data.icon }}</mat-icon>
-    {{ item.data.text }}
-  </a>
-  <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/blank-page']">
-    <mat-icon class="sidenav-icon">insert_drive_file</mat-icon>Blank Page
+  <a mat-list-item [routerLinkActive]="'activeRoute'" [routerLink]="['/', 'dashboard']">
+    <mat-icon class="sidenav-icon">dashboard</mat-icon>
+    <span>Dashboard</span>
   </a>
   <div class="nested-menu">
-    <a mat-list-item (click)="showMenu = !showMenu">
-      <mat-icon class="sidenav-icon">add</mat-icon>Menu
+    <a mat-list-item (click)="studycenter = !studycenter">
+      <mat-icon class="sidenav-icon">location_city</mat-icon><span
+        style="width: 100%; display: flex; justify-content:space-between; align-items: center;">Study Center
+        <mat-icon>{{ !studycenter ? 'expand_more' : 'expand_less'}}</mat-icon></span>
     </a>
-    <ul class="nested submenu" [class.expand]="showMenu">
+    <ul class="nested studycenter" [class.expand]="studycenter">
       <li>
-        <a href="javascript:void(0)">
-          <span>Submenu</span>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/studycenter', 'add-center']">
+          <span>Add Centers</span>
         </a>
       </li>
       <li>
-        <a href="javascript:void(0)">
-          <span>Submenu</span>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">
-          <span>Submenu</span>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/studycenter', 'manage-center']">
+          <span>Manage Center</span>
         </a>
       </li>
     </ul>
   </div>
+  <div class="nested-menu">
+    <a mat-list-item (click)="subject = !subject">
+      <mat-icon class="sidenav-icon">subject</mat-icon><span
+        style="width: 100%; display: flex; justify-content:space-between; align-items: center;">Subjects <mat-icon>{{
+          !subject ? 'expand_more' : 'expand_less'}}</mat-icon></span>
+    </a>
+    <ul class="nested subject" [class.expand]="subject">
+      <li>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/subject', 'add-subject']">
+          <span>Add Subject</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/subject', 'manage-subject']">
+          <span>Manage Subject</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="nested-menu">
+    <a mat-list-item (click)="course = !course">
+      <mat-icon class="sidenav-icon">menu_book</mat-icon><span
+        style="width: 100%; display: flex; justify-content:space-between; align-items: center;">Course <mat-icon>{{
+          !course ? 'expand_more' : 'expand_less'}}</mat-icon></span>
+    </a>
+    <ul class="nested course" [class.expand]="course">
+      <li>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/course', 'add-course']">
+          <span>Add Course</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/course', 'manage-course']">
+          <span>Manage Course</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="nested-menu">
+    <a mat-list-item (click)="staff = !staff">
+      <mat-icon class="sidenav-icon">group</mat-icon><span
+        style="width: 100%; display: flex; justify-content:space-between; align-items: center;">Staff <mat-icon>{{
+          !staff ? 'expand_more' : 'expand_less'}}</mat-icon></span>
+    </a>
+    <ul class="nested staff" [class.expand]="staff">
+      <li>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/staff', 'add-staff']">
+          <span>Add Staff</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/staff', 'manage-staff']">
+          <span>Manage Staff</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="nested-menu">
+    <a mat-list-item (click)="session = !session">
+      <mat-icon class="sidenav-icon">bookmark</mat-icon><span
+        style="width: 100%; display: flex; justify-content:space-between; align-items: center;">Session <mat-icon>{{
+          !session ? 'expand_more' : 'expand_less'}}</mat-icon></span>
+    </a>
+    <ul class="nested session" [class.expand]="session">
+      <li>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/session', 'add-session']">
+          <span>Add Session</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/session', 'manage-session']">
+          <span>Manage Session</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="nested-menu">
+    <a mat-list-item (click)="attendence = !attendence">
+      <mat-icon class="sidenav-icon">checkbox</mat-icon><span
+        style="width: 100%; display: flex; justify-content:space-between; align-items: center;">Attendence <mat-icon>{{
+          !attendence ? 'expand_more' : 'expand_less'}}</mat-icon></span>
+    </a>
+    <ul class="nested attendence" [class.expand]="attendence">
+      <li>
+        <a [routerLinkActive]="''" [routerLink]="['/attendence', 'mark-attendence']">
+          <span>Mark Attendence</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLinkActive]="'activeRoute'" [routerLink]="['/attendence', 'view-attendence']">
+          <span>View Attendence</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- <a *ngFor="let item of routes" mat-list-item [routerLinkActive]="'active'" [routerLink]="['/', item.path]">
+    <mat-icon class="sidenav-icon">{{ item.data.icon }}</mat-icon>
+    {{ item.data.text }}
+  </a> -->
 </mat-nav-list>

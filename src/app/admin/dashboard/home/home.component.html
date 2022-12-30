@@ -1,34 +1,62 @@
-<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
-  <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
-    <app-stat [bgClass]="'danger'" [icon]="'bookmarks'" [count]="13" [label]="'New Tickets!'"></app-stat>
+<div class="main-container">
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
+    <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
+      <app-stat [bgClass]="'danger'" [icon]="'supervisor_account'" [count]="2534" [label]="'Total Students'"></app-stat>
+    </div>
+    <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
+      <app-stat [bgClass]="'warn'" [icon]="'group'" [count]="526" [label]="'Total Teachers'"></app-stat>
+    </div>
+    <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
+      <app-stat [bgClass]="'success'" [icon]="'menu_book'" [count]="124" [label]="'Total Courses'"></app-stat>
+    </div>
+    <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
+      <app-stat [bgClass]="'info'" [icon]="'school'" [count]="13" [label]="'Total Centers'"></app-stat>
+    </div>
   </div>
-  <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
-    <app-stat [bgClass]="'warn'" [icon]="'view_list'" [count]="12" [label]="'New Task!'"></app-stat>
-  </div>
-  <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
-    <app-stat [bgClass]="'success'" [icon]="'shopping_cart'" [count]="124" [label]="'New Orders!'"></app-stat>
-  </div>
-  <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
-    <app-stat [bgClass]="'info'" [icon]="'contact_support'" [count]="13" [label]="'New Tickets!'"></app-stat>
-  </div>
-</div>
 
-<div class="mt20" fxLayout="row" fxLayoutAlign="space-between stretch" fxLayout.lt-md="column" fxLayoutGap="20px">
-  <mat-card fxFlex *ngFor="let item of places">
-    <img mat-card-image [src]="item.imgSrc">
-    <mat-card-header style="justify-content: center">
-      <mat-card-title>
-        <h3 class="m-0">{{item.name}}</h3>
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      {{item.description}}
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>{{item.charge}}</button>
-      <button mat-button>
-        <mat-icon class="location-icon">location_on</mat-icon> {{item.location}}
-      </button>
-    </mat-card-actions>
-  </mat-card>
+  <div class="mt20 graphChart" fxLayout="row" fxLayoutAlign="space-between stretch" fxLayout.lt-md="column" fxLayoutGap="20px">
+    <mat-card fxFlex="100" class="chartMainCard">
+      <div class="chatData">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Student Chart</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <canvas
+              baseChart
+              type="pie"
+              width="500"
+              height="200"
+              [data]="pieChartData"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"
+            ></canvas>
+          </mat-card-content>
+        </mat-card>
+        
+      </div>
+      <div class="chatData">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Student Chart</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <canvas
+              baseChart
+              type="pie"
+              width="500"
+              height="200"
+              [data]="pieChartData"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"
+            ></canvas>
+          </mat-card-content>
+        </mat-card>
+        
+      </div>
+      
+
+    </mat-card>
+  </div>
+
 </div>

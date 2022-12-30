@@ -1,0 +1,37 @@
+Admin Login
+  -Dashboard
+  -Study Center
+    -Add Center
+    -Manage Center
+  -Manage Student
+  Subjects
+    -Add Subject
+    -Manage Subject
+  Course 
+    -Add Course
+    -Manage Course
+  Staff
+    -Add Staff
+    -Manage Staff
+  Session
+    -Add Session
+    -Manage Session
+  View Attendence
+
+
+Center Login
+  -Dashboard
+  -Student
+    -Add Student
+    -Manage Student
+  -Manage Subject
+  -Mange Course
+  -Staff
+    -Add Staff
+    -Manage Staff
+  -Manage Attendence
+
+  
+Student Login
+  -Profile
+  -View Attendence

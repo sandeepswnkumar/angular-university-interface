@@ -21,6 +21,12 @@
       background: $white;
       max-width: 500px;
       box-shadow: 0 0 20px #ddd;
+      .center{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       input:-webkit-autofill {
         box-shadow: 0 0 0 30px $white inset;
         -webkit-box-shadow: 0 0 0 30px $white inset;

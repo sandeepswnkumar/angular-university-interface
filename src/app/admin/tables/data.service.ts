@@ -4,6 +4,10 @@ export interface UserData {
   name: string;
   progress: string;
   color: string;
+  age:string;
+  state:string;
+  country:string;
+  mobile:string;
 }
 
 @Injectable()
@@ -60,7 +64,11 @@ export class DataService {
       id: id.toString(),
       name: name,
       progress: Math.round(Math.random() * 100).toString(),
-      color: this.colors[this.getRandomArrayIndex(this.colors.length)]
+      color: this.colors[this.getRandomArrayIndex(this.colors.length)],
+      age: this.colors[this.getRandomArrayIndex(this.colors.length)],
+      state: this.colors[this.getRandomArrayIndex(this.colors.length)],
+      country: this.colors[this.getRandomArrayIndex(this.colors.length)],
+      mobile: Math.round(Math.random() * 100).toString(),
     };
   }
 
